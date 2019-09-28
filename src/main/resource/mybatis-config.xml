@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 导入约束头 -->
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- 根节点 -->
+<configuration>
+
+	<!--配置自动映射级别
+		none:不映射 手动映射
+		默认:自动映射,但是一旦出现association conlcation 就不会再自动映射了
+		FULL:无论如何都映射
+	-->
+
+	<!-- 为pojo起别名 简化返回值类型 -->
+
+	<!--<typeAliases>
+		<typeAlias type="com.githup.mybatis.pojo.User" alias="user"/>
+	</typeAliases>-->
+	<!-- 直接配置包名,mybatis框架会自动的找这个包下的所有实体类 为这些实体类起别名 别名就是类名(不区分大小写)-->
+	<typeAliases>
+		<package name="com.github.mybatisSpring.pojo"/>
+	</typeAliases>
+
+
+</configuration>
